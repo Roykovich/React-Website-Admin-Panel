@@ -1,16 +1,24 @@
 import './App.css';
-import Header from './components/Header.js'
-import Content from './components/Content.js'
-import Footer from './components/Footer.js'
+import Toolbar from './components/Toolbar'
+import Header from './components/Header'
+import Content from './components/Content'
+import Footer from './components/Footer'
 
-function App() {
+
+function Home() {
   return (
     <div className="container">
+      <Toolbar />
       <Header />
       <Content />
-      <Footer />
+      {/* <Footer />   */}
     </div>
   )
+}
+
+
+function App() {
+  return <Home />
 }
 
 export default App;

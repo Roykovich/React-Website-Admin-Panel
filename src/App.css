@@ -26,15 +26,6 @@ body {
   color: var(--accent);
 }
 
-.header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* justify-content: center; */
-  height: 20vh;
-  border-bottom: 1px red solid;
-}
-
 .toolbar {
   display: flex;
   align-items: center;
@@ -56,9 +47,53 @@ body {
   background-color: var(--accent-less);
 }
 
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 20vh;
+  width: 80vw;
+  margin: 0 auto;
+}
+
+header .img {
+  width: 80px;
+  height: 80px;
+  border-radius: 4px;
+  background-color: #3a7d44;
+}
+
+header .username {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+header h3,
+header h4 {
+  display: flex;
+  margin: 0;
+}
+
+header .progressBars {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 0 auto;
+}
+
+header .bar {
+  display: flex;
+  flex-direction: row;
+}
+
+header .progress {
+  height: 20px;
+  width: 100px;
+  background-color: #3a7d44;
+}
+
 .content {
   display: flex;
-  justify-content: center;
   margin: 0 auto;
   padding: 0.5em;
   height: 80vh;

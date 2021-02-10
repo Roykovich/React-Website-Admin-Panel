@@ -1,0 +1,15 @@
+.light {
+  --theme-page-background: #fff;
+  --theme-page-text: #2e2c2f;
+  --theme-accent: #3a7d44;
+  --theme-accent-less: #729b79;
+  --theme-accent-less-less: #bacdb0;
+}
+
+.dark {
+  --theme-page-background: #2e2c2f;
+  --theme-page-text: #fff;
+  --theme-accent: #3a7d44;
+  --theme-accent-less: #729b79;
+  --theme-accent-less-less: #bacdb0;
+}

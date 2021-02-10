@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--theme-page-background);
+  color: var(--theme-page-text);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.accent {
+  color: var(--accent);
+}
+
+nav {
+  display: flex;
+  text-transform: uppercase;
+  justify-content: space-between;
+  border-bottom: var(--theme-accent-less) 3px solid;
+  align-items: center;
+  padding: 10px;
+  max-width: 100%;
+  background-color: var(--theme-page-background);
+}
+
+nav .navbar-logo {
+  margin-left: 10px;
+}
+
+nav button {
+  background-color: var(--theme-accent-less-less);
+  border: none;
+  font-size: 100%;
+  height: 100%;
+  color: var(--theme-page-text);
+  cursor: pointer;
+}
+
+/* nav button:hover {
+  background-color: var(--theme-accent-less);
+} */
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 250px;
+  width: 100%;
+  border: 1px red solid;
+}
+
+header .about {
+  flex: 3;
+  width: 20px;
+  height: 235px;
+  border-radius: 4px;
+  background-color: var(--theme-accent-less);
+}
+
+header .info {
+  display: flex;
+  flex: 3;
+  flex-direction: column;
+  justify-content: space-around;
+  border: 1px solid red;
+  height: 100%;
+  width: 300px;
+}
+
+header .events {
+  border-radius: 4px;
+  border: 1px solid red;
+  background-color: #3a7d44;
+  height: 110px;
+  width: 300px;
+}
+
+header .updates {
+  width: 300px;
+  height: 110px;
+  border-radius: 4px;
+  background-color: #3a7d44;
+}
+
+header .progressBars {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+}
+
+header .bar-container {
+  display: flex;
+  flex-direction: column;
+  border: 1px red solid;
+}
+
+header .bar-title {
+  font-size: 100%;
+}
+
+header .bar {
+  display: flex;
+  flex-direction: row;
+}
+
+header .bar-progress {
+  height: px;
+  width: 140px;
+  background-color: #3a7d44;
+  margin-right: 10px;
+}
+
+.content {
+  display: flex;
+  height: 80vh;
+  width: 100%;
+  border: red 1px solid;
+}
+
+.footer {
+  text-align: center;
+  height: 4em;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: var(--accent-less, #729b79);
+  color: white;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 800px) {
+  /* header {
+    display: flex;
+    flex-direction: column;
+  } */
+}

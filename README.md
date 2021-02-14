@@ -10,17 +10,17 @@ Create an admin dashboard to configure website settings that requires user login
 
 ## `Levels`
 
-- [ ] Level 1
+- [x] Level 1
 - [ ] Level 2
 - [ ] Level 3
 
 ## `ToDos`
 
-- [ ] Create a new page
+- [x] Create a new page
 - [ ] Create an admin page
-- [ ] Require login for admin
-- [ ] Add login page
-- [ ] Integrate authentication
+- [x] Require login for admin
+- [x] Add login page
+- [x] Integrate authentication
 - [ ] Add configurable settings
 - [ ] Add configuration form
 - [ ] Update config on save

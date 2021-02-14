@@ -25,6 +25,17 @@ body {
   color: var(--accent);
 }
 
+.read-more {
+  text-transform: uppercase;
+  cursor: pointer;
+  color: var(--theme-accent);
+  transition: transform 250ms;
+}
+
+.read-more:hover {
+  transform: translateX(5px);
+}
+
 nav {
   display: flex;
   text-transform: uppercase;
@@ -41,7 +52,7 @@ nav .navbar-logo {
 }
 
 nav button {
-  background-color: var(--theme-accent-less-less);
+  background-color: inherit;
   border: none;
   font-size: 100%;
   height: 100%;
@@ -57,18 +68,48 @@ header {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   height: 250px;
   width: 100%;
-  border: 1px red solid;
+  border-bottom: 3px solid var(--theme-accent-less);
+  background-color: var(--theme-page-background);
 }
 
 header .about {
+  display: flex;
   flex: 3;
-  width: 20px;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+header .about-container {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
   height: 235px;
-  border-radius: 4px;
   background-color: var(--theme-accent-less);
+}
+
+header .about-text {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 5px 0 5px 20px;
+  flex: 2;
+}
+
+header .about-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 2;
+}
+
+header .about-img img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
 }
 
 header .info {
@@ -76,55 +117,83 @@ header .info {
   flex: 3;
   flex-direction: column;
   justify-content: space-around;
-  border: 1px solid red;
   height: 100%;
-  width: 300px;
 }
 
-header .events {
-  border-radius: 4px;
-  border: 1px solid red;
-  background-color: #3a7d44;
+header .info div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 5px 0 5px 20px;
+  width: 90%;
   height: 110px;
-  width: 300px;
+  background-color: var(--theme-accent-less);
 }
 
-header .updates {
-  width: 300px;
-  height: 110px;
-  border-radius: 4px;
-  background-color: #3a7d44;
+header .info h2 {
+  text-transform: uppercase;
+}
+
+header .info p {
+  font-size: 100%;
 }
 
 header .progressBars {
   flex: 3;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  height: 100%;
 }
 
-header .bar-container {
+header .progressBars-container {
   display: flex;
   flex-direction: column;
-  border: 1px red solid;
+  align-items: flex-start;
+  justify-content: space-around;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 5px 0 5px 20px;
+  width: 90%;
+  height: 235px;
+  background-color: var(--theme-accent-less);
+}
+
+header .book-progress-bar {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
 }
 
 header .bar-title {
   font-size: 100%;
+  transform: translateY(-6px);
+}
+
+header .bar-container {
+  display: flex;
+  flex-direction: row;
 }
 
 header .bar {
   display: flex;
   flex-direction: row;
-}
-
-header .bar-progress {
-  height: px;
-  width: 140px;
-  background-color: #3a7d44;
+  width: 80%;
   margin-right: 10px;
 }
 
+header .bar-progress {
+  height: 20px;
+  background-color: #3a7d44;
+}
+
 .content {
+  margin-top: 10px;
   display: flex;
   height: 80vh;
   width: 100%;

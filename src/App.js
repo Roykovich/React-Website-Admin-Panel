@@ -7,11 +7,15 @@ import Content from "./components/Content";
 import Footer from "./components/Footer";
 
 function Home() {
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState("light");
+
+  const toggleTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light");
+  };
 
   return (
     <div className={`container ${theme}`}>
-      <Navbar />
+      <Navbar toggleTheme={toggleTheme} />
       <div className="wrapper">
         <Header />
         <Content />

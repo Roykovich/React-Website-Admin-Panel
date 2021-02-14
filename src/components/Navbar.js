@@ -1,3 +1,5 @@
+import AuthenticationButton from '../components/authentication-button';
+
 import "../styles/Navbar.css";
 
 const Navbar = ({ toggleTheme }) => {
@@ -10,7 +12,7 @@ const Navbar = ({ toggleTheme }) => {
           <input type="checkbox" />
           <span className="slider round" onClick={toggleTheme}></span>
         </label>
-        <button>Login</button>
+        <AuthenticationButton />
       </div>
     </nav>
   );

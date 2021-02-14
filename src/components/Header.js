@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 // Create a bar component, maybe an external file
 const Bar = ({ name, progress }) => {
   return (
@@ -16,31 +18,11 @@ const Bar = ({ name, progress }) => {
   );
 };
 
-const AuthenticatedHeader = () => {
-  const user = {
-    name: "John Doe",
-    username: "john_doe",
-  };
-
-  const books = [
-    { name: "Fahrenheit 451", progress: 61 },
-    { name: "Rogue Protocols", progress: 100 },
-    { name: "Rythm of War", progress: 0 },
-  ];
-
-  return (
-    <>
-      <div className="img"></div>
-      <div className="username">
-        <h3>{user.name}</h3>
-        <h4>@{user.username}</h4>
-      </div>
-      {books.map((book) => (
-        <Bar name={book.name} progress={book.progress} />
-      ))}
-    </>
-  );
-};
+/**
+ * TODO
+ *
+ * Create AuthenticatedHeader component
+ */
 
 const UnauthenticatedHeader = () => {
   return (
@@ -59,7 +41,9 @@ const UnauthenticatedHeader = () => {
             <br />
             <p>Aquí un textico muy cosmico que cosmiquea en las interwebs</p>
             <br />
-            <h4 className="read-more">Read more</h4>
+            <Link to="/admin" className="read-more">
+              Read more
+            </Link>
           </div>
         </div>
       </div>
@@ -67,12 +51,16 @@ const UnauthenticatedHeader = () => {
         <div>
           <h2>Events</h2>
           <p>Peace was never an option. Cunt.</p>
-          <h4 className="read-more">Read more</h4>
+          <Link to="#" className="read-more">
+            Read more
+          </Link>
         </div>
         <div>
           <h2>Lastest Updates</h2>
           <p>Peace was never an option. Cunt.</p>
-          <h4 className="read-more">Read more</h4>
+          <Link to="#" className="read-more">
+            Read more
+          </Link>
         </div>
       </div>
       <div className="progressBars">
@@ -91,7 +79,8 @@ const Header = () => {
   const meme = false;
   return (
     <header>
-      {meme ? <AuthenticatedHeader /> : <UnauthenticatedHeader />}
+      {/* {meme ? <AuthenticatedHeader /> : <UnauthenticatedHeader />} */}
+      <UnauthenticatedHeader />
     </header>
   );
 };

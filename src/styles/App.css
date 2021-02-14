@@ -27,6 +27,8 @@ body {
 
 .read-more {
   text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 800;
   cursor: pointer;
   color: var(--theme-accent);
   display: flex;

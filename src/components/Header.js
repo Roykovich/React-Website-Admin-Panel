@@ -57,7 +57,6 @@ const UnauthenticatedHeader = () => {
           <div className="about-text">
             <h2>STATE OF THE JOHN DOE</h2>
             <br />
-            <br />
             <p>Aquí un textico muy cosmico que cosmiquea en las interwebs</p>
             <br />
             <h4 className="read-more">Read more</h4>

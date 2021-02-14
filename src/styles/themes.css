@@ -1,14 +1,14 @@
 .light {
-  --theme-page-background: #fff;
+  --theme-page-background: #f5f5f5;
   --theme-page-text: #1f1e1f;
   --theme-accent: #3a7d44;
-  --theme-accent-less: #2e2c2f;
+  --theme-accent-less: #cccace;
   --theme-accent-less-less: #bacdb0;
 }
 
 .dark {
   --theme-page-background: #1f1e1f;
-  --theme-page-text: #fff;
+  --theme-page-text: #f5f5f5;
   --theme-accent: #3a7d44;
   --theme-accent-less: #2e2c2f;
   --theme-accent-less-less: #bacdb0;

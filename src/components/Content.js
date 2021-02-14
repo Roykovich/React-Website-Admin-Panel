@@ -1,3 +1,5 @@
+import { HiChevronDoubleRight } from "react-icons/hi";
+
 const Post = () => {
   return (
     <div className="post">
@@ -14,7 +16,10 @@ const Post = () => {
             repellendus officia quia atque!
           </h4>
           <br />
-          <h4 className="read-more">Read more</h4>
+          <h4 className="read-more">
+            Read more
+            <HiChevronDoubleRight />
+          </h4>
         </div>
       </div>
     </div>

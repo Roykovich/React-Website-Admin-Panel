@@ -29,6 +29,8 @@ body {
   text-transform: uppercase;
   cursor: pointer;
   color: var(--theme-accent);
+  display: flex;
+  align-items: center;
   transition: transform 250ms;
 }
 
@@ -185,6 +187,8 @@ main {
   margin-top: 20px;
   height: 200px;
   border: 3px solid var(--theme-accent-less);
+  /* background-color: var(--theme-accent-less); */
+  border-radius: 4px;
 }
 
 .post-container {

@@ -17,17 +17,17 @@ nav .navbar-buttons {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-right: 20px;
   height: 100%;
-  width: 130px;
+  width: 150px;
 }
 
-nav button {
-  background-color: inherit;
+nav .navbar-buttons button {
+  background-color: red;
   border: none;
+  border-radius: 5px;
+  height: 30px;
   font-size: 100%;
-  height: 100%;
-  color: var(--theme-page-text);
+  color: #f5f5f5;
   cursor: pointer;
 }
 

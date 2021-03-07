@@ -17,7 +17,7 @@ Create an admin dashboard to configure website settings that requires user login
 ## `ToDos`
 
 - [x] Create a new page
-- [ ] Create an admin page
+- [x] Create an admin page
 - [x] Require login for admin
 - [x] Add login page
 - [x] Integrate authentication

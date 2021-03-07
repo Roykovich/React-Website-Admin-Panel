@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 
+import "../styles/Header.css";
+
 // Create a bar component, maybe an external file
 const Bar = ({ name, progress }) => {
   return (
@@ -37,7 +39,7 @@ const UnauthenticatedHeader = () => {
             />
           </div>
           <div className="about-text">
-            <h2>STATE OF THE JOHN DOE</h2>
+            <h2>JOHN DOE</h2>
             <br />
             <p>Aquí un textico muy cosmico que cosmiquea en las interwebs</p>
             <br />

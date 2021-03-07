@@ -1,4 +1,5 @@
 import { HiChevronDoubleRight } from "react-icons/hi";
+import '../styles/Content.css'
 
 const Post = () => {
   return (
@@ -28,7 +29,7 @@ const Post = () => {
 
 const Content = () => {
   return (
-    <main>
+    <main className="main-content">
       <Post />
       <Post />
       <Post />

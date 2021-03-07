@@ -25,6 +25,7 @@ function Home() {
             <Header />
             <Content />
           </Route>
+          {/* <Route path="/admin-test" component={Panel} /> */}
           <ProtectedRoute path="/admin" component={Panel} />
         </div>
         {/* <Footer />   */}

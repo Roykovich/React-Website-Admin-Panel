@@ -4,7 +4,8 @@ nav {
   justify-content: space-between;
   border-bottom: var(--theme-accent-less) 3px solid;
   align-items: center;
-  height: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   max-width: 100%;
   background-color: var(--theme-page-background);
 }
@@ -21,7 +22,7 @@ nav .navbar-buttons {
   width: 150px;
 }
 
-nav .navbar-buttons button {
+nav .navbar-buttons .logout-button {
   background-color: red;
   border: none;
   border-radius: 5px;

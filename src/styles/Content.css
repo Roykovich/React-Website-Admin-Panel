@@ -1,0 +1,40 @@
+.main-content {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 20px 5px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 10px;
+  margin-top: 20px;
+  height: 200px;
+  border: 3px solid var(--theme-accent-less);
+  border-radius: 4px;
+}
+
+.post-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.post-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.post-container .preview {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px 0 10px 20px;
+}

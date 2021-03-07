@@ -1,0 +1,78 @@
+.main-panel {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.admin {
+  display: flex;
+  flex-direction: row;
+  min-height: calc(100vh - 57px);
+  width: 100%;
+  color: var(--theme-page-text);
+}
+
+.admin > .menu {
+  padding: 10px 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-right: var(--theme-accent-less) 3px solid;
+}
+
+.options {
+  width: 100%;
+}
+
+.options > h3 {
+  text-align: center;
+  padding: 20px 0;
+  margin-bottom: 10px;
+}
+
+.options > ul {
+  padding: 0;
+  width: 100%;
+  list-style: none;
+  /* border-bottom: var(--theme-accent-less) 2px solid; */
+}
+
+.options > ul li {
+  width: 100%;
+  padding: 10px 0;
+  /* border-top: var(--theme-accent-less) 2px solid; */
+}
+
+.options > ul li:hover {
+  background-color: var(--theme-accent-less);
+  color: var(--theme-accent);
+  border-left: var(--theme-accent) 3px solid;
+  cursor: default;
+}
+
+.active {
+  background-color: var(--theme-accent-less);
+  color: var(--theme-accent);
+  border-left: var(--theme-accent) 3px solid;
+}
+
+.options > ul li a {
+  text-decoration: none;
+  display: block;
+  padding: 0 0 0 5px;
+}
+
+/* .options > ul li a:hover {
+  padding: 0 0 0 15px;
+} */
+
+.admin > .settings {
+  flex: 5;
+}

@@ -75,4 +75,55 @@
 
 .admin > .settings {
   flex: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.settings > h1 {
+  line-height: 90px;
+  flex: 1;
+  width: 80%;
+  height: 20%;
+}
+
+.settings > .preview {
+  flex: 2;
+  width: 80%;
+}
+
+.settings > .createPost {
+  display: flex;
+  flex-direction: row;
+  flex: 3;
+  width: 80%;
+  padding: 10px 0;
+}
+
+.createPost > form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.createPost input[type="text"],
+textarea {
+  width: 90%;
+  padding: 12px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 20px;
+  border: none;
+  background: var(--theme-accent-less);
+  color: var(--theme-page-text);
+  resize: none;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  border: var(--theme-accent) 2px solid;
+  outline: none;
 }

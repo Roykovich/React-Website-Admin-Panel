@@ -11,7 +11,7 @@ Create an admin dashboard to configure website settings that requires user login
 ## `Levels`
 
 - [x] Level 1
-- [ ] Level 2
+- [x] Level 2
 - [ ] Level 3
 
 ## `ToDos`

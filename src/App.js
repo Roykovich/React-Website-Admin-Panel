@@ -28,7 +28,7 @@ function Home() {
         setUpdates(data.last_updates);
       })
       .catch(err => console.error(err));
-  }, [bookProgress]);
+  }, []);
 
   return (
     <Router>
@@ -43,7 +43,11 @@ function Home() {
             />
             <Content />
           </Route>
-          <ProtectedRoute path="/admin" component={Panel} />
+          <ProtectedRoute
+            path="/admin"
+            component={Panel}
+
+          />
         </div>
         {/* <Footer />   */}
       </div>

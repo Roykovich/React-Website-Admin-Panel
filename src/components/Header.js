@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useEffect } from 'react';
 
 import "../styles/Header.css";
 
@@ -20,15 +21,10 @@ const Bar = ({ name, progress }) => {
   );
 };
 
-/**
- * TODO
- *
- * Create AuthenticatedHeader component
- */
 
-const UnauthenticatedHeader = () => {
+const Header = props => {
   return (
-    <>
+    <header>
       {/* Aquí una imagen? */}
       <div className="about">
         <div className="about-container">
@@ -52,14 +48,14 @@ const UnauthenticatedHeader = () => {
       <div className="info">
         <div>
           <h2>Events</h2>
-          <p>Peace was never an option. Cunt.</p>
+          <p>{props.events}</p>
           <Link to="#" className="read-more">
             Read more
           </Link>
         </div>
         <div>
           <h2>Lastest Updates</h2>
-          <p>Peace was never an option. Cunt.</p>
+          <p>{props.updates}</p>
           <Link to="#" className="read-more">
             Read more
           </Link>
@@ -67,22 +63,17 @@ const UnauthenticatedHeader = () => {
       </div>
       <div className="progressBars">
         <div className="progressBars-container">
-          <Bar name={"Fahrenheit 451"} progress={63} />
+          {
+            props.bookProgress.map((book, i) => {
+              return <Bar name={book.name} progress={book.progress} key={i} />
+            })
+          }
+          {/* <Bar name={"Fahrenheit 451"} progress={63} />
           <Bar name={"Rogue Protocols"} progress={100} />
           <Bar name={"Rythm of War"} progress={0} />
-          <Bar name={"Mistborn"} progress={16} />
+          <Bar name={"Mistborn"} progress={16} /> */}
         </div>
       </div>
-    </>
-  );
-};
-
-const Header = () => {
-  const meme = false;
-  return (
-    <header>
-      {/* {meme ? <AuthenticatedHeader /> : <UnauthenticatedHeader />} */}
-      <UnauthenticatedHeader />
     </header>
   );
 };

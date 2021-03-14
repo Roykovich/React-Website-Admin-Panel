@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./styles/themes.css";
 import "./styles/App.css";
@@ -11,10 +11,24 @@ import Footer from "./components/Footer";
 
 function Home() {
   const [theme, setTheme] = useState("light");
+  const [events, setEvents] = useState("There's no current events.");
+  const [updates, setUpdates] = useState("There's no current updates.");
+  const [bookProgress, setBookProgress] = useState([]);
 
   const toggleTheme = () => {
     setTheme(theme === "light" ? "dark" : "light");
   };
+
+  useEffect(() => {
+    fetch('http://localhost:5000/config')
+      .then(res => res.json())
+      .then(async data => {
+        setBookProgress([...data.book_progress]);
+        setEvents(data.events);
+        setUpdates(data.last_updates);
+      })
+      .catch(err => console.error(err));
+  }, [bookProgress]);
 
   return (
     <Router>
@@ -22,10 +36,13 @@ function Home() {
         <Navbar toggleTheme={toggleTheme} />
         <div className="wrapper">
           <Route path="/" exact>
-            <Header />
+            <Header
+              events={events}
+              updates={updates}
+              bookProgress={bookProgress}
+            />
             <Content />
           </Route>
-          {/* <Route path="/admin-test" component={Panel} /> */}
           <ProtectedRoute path="/admin" component={Panel} />
         </div>
         {/* <Footer />   */}

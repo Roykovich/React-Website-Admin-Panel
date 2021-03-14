@@ -94,7 +94,7 @@
   width: 80%;
 }
 
-.settings > .createPost {
+.settings > .createPost .headerSettings {
   display: flex;
   flex-direction: row;
   flex: 3;

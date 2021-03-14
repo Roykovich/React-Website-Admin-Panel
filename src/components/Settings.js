@@ -1,11 +1,21 @@
 import { useState } from "react";
 import { MaybePost } from "../components/Content";
 
+
 /**
  * TODO
  *  * 1) Acomodar todo esto para volverlo placeholders nada más
  *  * 2) Cambiar el texto del preview con state
  */
+
+export const EditPage = () => {
+  return (
+    <>
+      <button>touch me</button>
+    </>
+  )
+}
+
 
 export const NewPost = () => {
   let today = new Date();
@@ -20,8 +30,6 @@ export const NewPost = () => {
   const [content, setContent] = useState(
     "Lorem, ipsum dolor sit amet consectetur adipisicing elit."
   );
-
-  console.log(today);
 
   return (
     <>

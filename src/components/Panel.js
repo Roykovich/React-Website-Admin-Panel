@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 
 import "../styles/Panel.css";
-import { NewPost } from "../components/Settings";
+import { NewPost, EditPage } from "../components/Settings";
 
 const Panel = () => {
   const [active, setActive] = useState("New Post");
@@ -39,7 +39,7 @@ const Panel = () => {
           {active === "New Post" ? (
             <NewPost />
           ) : active === "Edit Page" ? (
-            <h1>{active}</h1>
+            <EditPage />
           ) : active === "Analytics" ? (
             <h1>{active}</h1>
           ) : (

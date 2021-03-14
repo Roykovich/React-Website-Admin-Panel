@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { useEffect } from 'react';
 
 import "../styles/Header.css";
 
@@ -64,14 +63,14 @@ const Header = props => {
       <div className="progressBars">
         <div className="progressBars-container">
           {
-            props.bookProgress.map((book, i) => {
-              return <Bar name={book.name} progress={book.progress} key={i} />
-            })
+            props.bookProgress.length > 0 ? (
+              props.bookProgress.map((book, i) => {
+                return <Bar name={book.name} progress={book.progress} key={i} />
+              })
+            ) : (
+                <h3>There's no books in progress right now</h3>
+            )
           }
-          {/* <Bar name={"Fahrenheit 451"} progress={63} />
-          <Bar name={"Rogue Protocols"} progress={100} />
-          <Bar name={"Rythm of War"} progress={0} />
-          <Bar name={"Mistborn"} progress={16} /> */}
         </div>
       </div>
     </header>

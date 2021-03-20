@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { HiMinusCircle, HiPlusCircle } from "react-icons/hi";
 import { MaybePost } from "../components/Content";
 import Header from "../components/Header";
 
@@ -17,8 +18,13 @@ export const EditPage = (props) => {
     event: 28,
   };
 
-  const changeEvents = (event) => {
-    setEvents(event.target.value);
+  const changeEvents = (event, input) => {
+    if (input === "events") {
+      setEvents(event.target.value);
+    }
+    else if (input === "updates") {
+      setUpdates(event.target.value);
+    }
   };
 
   return (
@@ -26,22 +32,63 @@ export const EditPage = (props) => {
       <div>
         <Header events={events} updates={updates} bookProgress={bookProgress} />
       </div>
-      <div>
+      <div className="headerSettings">
         <form action="" method="post">
           <label htmlFor="Events">
             <b>Events</b>
-            <div>
-              <input
-                type="text"
-                name="Events"
-                id=""
-                placeholder="Type a title"
-                value={events}
-                onChange={changeEvents}
-              />
-              <p>{limits.event - events.length}</p>
-            </div>
           </label>
+          <div className="input-container">
+            <input
+              type="text"
+              name="Events"
+              placeholder="Type event"
+              value={events}
+              onChange={e => changeEvents(e, 'events')}
+              maxLength={limits.event}
+            />
+            <p className="show-limit"><b>{events.length}/{limits.event}</b></p>
+          </div>
+          <label htmlFor="Updates">
+            <b>Last Updates</b>
+          </label>
+          <div className="input-container">
+            <input
+              type="text"
+              name="Updates"
+              placeholder="Type update"
+              value={updates}
+              onChange={e => changeEvents(e, 'updates')}
+              maxLength={limits.event}
+            />
+            <p className="show-limit"><b>{updates.length}/{limits.event}</b></p>
+          </div>
+          <button>Save</button>
+        </form>
+        <form style={{ background: "red", flex: 2 }}>
+          {
+            bookProgress.map((book, i) => {
+              return <p>{book.name} - {book.progress}%</p>
+            })
+          }
+          <div>
+            {
+              bookProgress.length === 0 ?
+                (<button>
+                  <HiPlusCircle />
+                </button>) : bookProgress.length === 4 ?
+                  (<button>
+                    <HiMinusCircle />
+                  </button>) :
+                  (<>
+                    <button>
+                      <HiPlusCircle />
+                    </button>
+                    <button>
+                      <HiMinusCircle />
+                    </button>
+                  </>)
+            }
+          </div>
         </form>
       </div>
     </>

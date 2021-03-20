@@ -94,7 +94,8 @@
   width: 80%;
 }
 
-.settings > .createPost .headerSettings {
+.settings > .createPost,
+.headerSettings {
   display: flex;
   flex-direction: row;
   flex: 3;
@@ -106,6 +107,35 @@
   flex: 1;
   display: flex;
   flex-direction: column;
+}
+
+.headerSettings > form {
+  flex: 1;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.show-limit {
+  margin: 10px 0px 20px 10px;
+}
+
+.headerSettings input[type="text"],
+textarea {
+  width: 220px;
+  padding: 12px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 20px;
+  border: none;
+  background: var(--theme-accent-less);
+  color: var(--theme-page-text);
+  resize: none;
 }
 
 .createPost input[type="text"],

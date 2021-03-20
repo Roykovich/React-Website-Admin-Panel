@@ -9,7 +9,7 @@ export const MaybePost = props => {
         <img src="https://picsum.photos/300/200" alt="" />
         <div className="preview">
           <h2>{props.title}</h2>
-          <p>{props.date}</p>
+          <p>fecha acá</p>
           <br />
           <h4>
             {props.content}

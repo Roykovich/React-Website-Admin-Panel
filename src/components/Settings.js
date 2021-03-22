@@ -21,9 +21,20 @@ export const EditPage = (props) => {
   const changeEvents = (event, input) => {
     if (input === "events") {
       setEvents(event.target.value);
-    }
-    else if (input === "updates") {
+    } else if (input === "updates") {
       setUpdates(event.target.value);
+    }
+  };
+
+  const removeFromBooks = (name) => {
+    setBookProgress(bookProgress.filter((book) => book.name !== name));
+  };
+
+  const changeProgress = (event, name, index) => {
+    if (event.target.value >= 0 && event.target.value <= 100) {
+      const newBooks = [...bookProgress];
+      newBooks[index].progress = event.target.value;
+      setBookProgress(newBooks);
     }
   };
 
@@ -43,10 +54,14 @@ export const EditPage = (props) => {
               name="Events"
               placeholder="Type event"
               value={events}
-              onChange={e => changeEvents(e, 'events')}
+              onChange={(e) => changeEvents(e, "events")}
               maxLength={limits.event}
             />
-            <p className="show-limit"><b>{events.length}/{limits.event}</b></p>
+            <p className="show-limit">
+              <b>
+                {events.length}/{limits.event}
+              </b>
+            </p>
           </div>
           <label htmlFor="Updates">
             <b>Last Updates</b>
@@ -57,41 +72,65 @@ export const EditPage = (props) => {
               name="Updates"
               placeholder="Type update"
               value={updates}
-              onChange={e => changeEvents(e, 'updates')}
+              onChange={(e) => changeEvents(e, "updates")}
               maxLength={limits.event}
             />
-            <p className="show-limit"><b>{updates.length}/{limits.event}</b></p>
+            <p className="show-limit">
+              <b>
+                {updates.length}/{limits.event}
+              </b>
+            </p>
           </div>
           <button>Save</button>
         </form>
-        <form style={{ background: "red", flex: 2 }}>
-          {
-            bookProgress.map((book, i) => {
-              return <p>{book.name} - {book.progress}%</p>
-            })
-          }
+        <form style={{ flex: 2 }}>
+          {bookProgress.map((book, i) => {
+            return (
+              <BookProgressContainer
+                removeFromBooks={removeFromBooks}
+                changeProgress={changeProgress}
+                name={book.name}
+                progress={book.progress}
+                index={i}
+                key={i}
+              />
+            );
+          })}
           <div>
-            {
-              bookProgress.length === 0 ?
-                (<button>
-                  <HiPlusCircle />
-                </button>) : bookProgress.length === 4 ?
-                  (<button>
-                    <HiMinusCircle />
-                  </button>) :
-                  (<>
-                    <button>
-                      <HiPlusCircle />
-                    </button>
-                    <button>
-                      <HiMinusCircle />
-                    </button>
-                  </>)
-            }
+            {bookProgress.length >= 0 && bookProgress.length < 4 ? (
+              <button>
+                <HiPlusCircle />
+              </button>
+            ) : (
+              <></>
+            )}
           </div>
         </form>
       </div>
     </>
+  );
+};
+
+const BookProgressContainer = (props) => {
+  const { name, removeFromBooks, progress, changeProgress, index } = props;
+
+  return (
+    <div className="bookProgressContainer">
+      <span name={name} onClick={() => removeFromBooks(name)}>
+        <HiMinusCircle />
+      </span>
+      <p>
+        <b>{name}</b>
+      </p>
+      <input
+        type="text"
+        inputMode="numeric"
+        pattern="(100)|(0*\d{1,2})"
+        name="progress"
+        value={progress}
+        onChange={(e) => changeProgress(e, name, index)}
+      />
+    </div>
   );
 };
 

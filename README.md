@@ -12,7 +12,7 @@ Create an admin dashboard to configure website settings that requires user login
 
 - [x] Level 1
 - [x] Level 2
-- [ ] Level 3
+- [x] Level 3
 
 ## `ToDos`
 
@@ -21,11 +21,7 @@ Create an admin dashboard to configure website settings that requires user login
 - [x] Require login for admin
 - [x] Add login page
 - [x] Integrate authentication
-- [ ] Add configurable settings
-- [ ] Add configuration form
-- [ ] Update config on save
-- [ ] Deploy or update on save
-
-## `Changelogs`
-
-- Soon™️
+- [x] Add configurable settings
+- [x] Add configuration form
+- [x] Update config on save
+- [x] Deploy or update on save

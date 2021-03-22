@@ -38,52 +38,81 @@ export const EditPage = (props) => {
     }
   };
 
+  const onSubmit = (event) => {
+    event.preventDefault()
+
+    fetch('http://localhost:5000/config', {
+      method: "put",
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        events,
+        last_updates: updates,
+        book_progress: bookProgress
+      })
+    })
+      .then(alert('Save!'))
+      .catch(err => console.log(err));
+  }
+
   return (
     <>
       <div>
         <Header events={events} updates={updates} bookProgress={bookProgress} />
       </div>
       <div className="headerSettings">
-        <form action="" method="post">
-          <label htmlFor="Events">
-            <b>Events</b>
-          </label>
-          <div className="input-container">
-            <input
-              type="text"
-              name="Events"
-              placeholder="Type event"
-              value={events}
-              onChange={(e) => changeEvents(e, "events")}
-              maxLength={limits.event}
-            />
-            <p className="show-limit">
-              <b>
-                {events.length}/{limits.event}
-              </b>
-            </p>
+        <form
+          method="put"
+          onSubmit={onSubmit}
+        >
+          <div>
+            <label htmlFor="Events">
+              <b>Events</b>
+            </label>
+            <div className="input-container">
+              <input
+                type="text"
+                name="Events"
+                placeholder="Type event"
+                value={events}
+                onChange={(e) => changeEvents(e, "events")}
+                maxLength={limits.event}
+              />
+              <p className="show-limit">
+                <b>
+                  {events.length}/{limits.event}
+                </b>
+              </p>
+            </div>
           </div>
-          <label htmlFor="Updates">
-            <b>Last Updates</b>
-          </label>
-          <div className="input-container">
-            <input
-              type="text"
-              name="Updates"
-              placeholder="Type update"
-              value={updates}
-              onChange={(e) => changeEvents(e, "updates")}
-              maxLength={limits.event}
-            />
-            <p className="show-limit">
-              <b>
-                {updates.length}/{limits.event}
-              </b>
-            </p>
+          <div>
+            <label htmlFor="Updates">
+              <b>Last Updates</b>
+            </label>
+            <div className="input-container">
+              <input
+                type="text"
+                name="Updates"
+                placeholder="Type update"
+                value={updates}
+                onChange={(e) => changeEvents(e, "updates")}
+                maxLength={limits.event}
+              />
+              <p className="show-limit">
+                <b>
+                  {updates.length}/{limits.event}
+                </b>
+              </p>
+            </div>
           </div>
-          <button>Save</button>
+          <button className="save-button">Save</button>
         </form>
-        <form style={{ flex: 2 }}>
+        <form
+          method="put"
+          onSubmit={onSubmit}
+        >
           {bookProgress.map((book, i) => {
             return (
               <BookProgressContainer
@@ -98,12 +127,13 @@ export const EditPage = (props) => {
           })}
           <div>
             {bookProgress.length >= 0 && bookProgress.length < 4 ? (
-              <button>
+              <span style={{ color: "green" }}>
                 <HiPlusCircle />
-              </button>
+              </span>
             ) : (
               <></>
             )}
+            <button className="save-button">Save</button>
           </div>
         </form>
       </div>

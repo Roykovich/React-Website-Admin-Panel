@@ -1,9 +1,12 @@
 header {
   display: flex;
+  box-sizing: border-box;
   flex-direction: row;
   justify-content: space-around;
-  min-height: 250px;
+  column-gap: 10px;
+  height: 250px;
   width: 100%;
+  padding: 10px 20px;
   background-color: var(--theme-page-background);
 }
 
@@ -13,13 +16,12 @@ header .about {
   flex-direction: column;
   justify-content: center;
   height: 100%;
-  margin: 10px;
 }
 
 header .about-container {
   display: flex;
   flex-direction: row;
-  height: 235px;
+  height: 100%;
   background-color: var(--theme-accent-less);
 }
 
@@ -49,7 +51,6 @@ header .info {
   flex: 1 1 0px;
   flex-direction: column;
   justify-content: space-between;
-  margin: 10px;
 }
 
 header .info div {
@@ -61,7 +62,6 @@ header .info div {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 5px 0 5px 20px;
-  /* width: 90%; */
   height: 110px;
   background-color: var(--theme-accent-less);
 }
@@ -79,7 +79,6 @@ header .progressBars {
   flex: 1 1 0px;
   flex-direction: column;
   justify-content: center;
-  margin: 10px;
 }
 
 header .progressBars-container {
@@ -91,7 +90,7 @@ header .progressBars-container {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 5px 0 5px 20px;
-  height: 235px;
+  height: 100%;
   background-color: var(--theme-accent-less);
 }
 

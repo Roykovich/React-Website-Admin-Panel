@@ -30,7 +30,7 @@ const Header = props => {
           <div className="about-img">
             <img
               src="https://randomuser.me/api/portraits/men/34.jpg"
-              alt="John Doe Photo Portrait"
+              alt="John Doe Portrait"
             />
           </div>
           <div className="about-text">

@@ -1,3 +1,9 @@
+:root {
+  font-size: 16px;
+
+  --margin-1: 1em;
+}
+
 body {
   margin: 0;
   font-family: 'Roboto Mono', monospace;

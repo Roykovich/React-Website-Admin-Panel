@@ -30,9 +30,6 @@ body {
   font-weight: 800;
   cursor: pointer;
   color: var(--theme-accent);
-  display: flex;
-  align-items: center;
-  width: 110px;
   transition: transform 250ms;
 }
 

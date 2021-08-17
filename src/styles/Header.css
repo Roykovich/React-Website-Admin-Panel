@@ -3,6 +3,8 @@ header {
   box-sizing: border-box;
   flex-direction: row;
   justify-content: space-around;
+  -webkit-column-gap: 10px;
+  -moz-column-gap: 10px;
   column-gap: 10px;
   height: 250px;
   width: 100%;
@@ -57,12 +59,12 @@ header .info div {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: space-around;
+  justify-content: space-between;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 5px 0 5px 20px;
   height: 110px;
+  padding: 5px 0 5px 20px;
   background-color: var(--theme-accent-less);
 }
 

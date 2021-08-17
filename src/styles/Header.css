@@ -103,8 +103,8 @@ header .book-progress-bar {
 }
 
 header .bar-title {
+  margin-bottom: 0.5em;
   font-size: 100%;
-  transform: translateY(-6px);
 }
 
 header .bar-container {
@@ -116,12 +116,13 @@ header .bar {
   display: flex;
   flex-direction: row;
   width: 80%;
-  margin-right: 10px;
+  margin-right: 1em;
+  background-color: var(--theme-page-background);
 }
 
 header .bar-progress {
   height: 20px;
-  background-color: #3a7d44;
+  background-color: var(--theme-accent);
 }
 
 @media (max-width: 900px) {

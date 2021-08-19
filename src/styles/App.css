@@ -26,7 +26,7 @@ body {
 
 .read-more {
   text-transform: initial;
-  text-decoration: underline;
+  text-decoration: none;
   cursor: pointer;
   font-weight: 600;
   color: var(--theme-accent);
@@ -34,7 +34,7 @@ body {
 }
 
 .read-more:hover {
-  transform: translateX(5px);
+  text-decoration: underline;
 }
 
 .footer {

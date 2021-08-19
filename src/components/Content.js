@@ -31,8 +31,8 @@ const Post = () => {
       <div className="post-container">
         <img src="https://picsum.photos/300/200" alt="" />
         <div className="preview">
-          <h2>Titulo así bien de pinga</h2>
-          <p>December 18, 2020</p>
+          <h2>Title placeholder</h2>
+          <p>August 18, 2021</p>
           <br />
           <h4>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis
@@ -43,7 +43,6 @@ const Post = () => {
           <br />
           <h4 className="read-more">
             Read more
-            <HiChevronDoubleRight />
           </h4>
         </div>
       </div>

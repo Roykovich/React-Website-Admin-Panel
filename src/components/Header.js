@@ -36,7 +36,7 @@ const Header = props => {
           <div className="about-text">
             <h2>JOHN DOE</h2>
             <br />
-            <p>Aquí un textico muy cosmico que cosmiquea en las interwebs</p>
+            <p>Find out what John Doe has done before and all about him!</p>
             <br />
             <Link to="/admin" className="read-more">
               Read more

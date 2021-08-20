@@ -126,12 +126,39 @@ header .bar-progress {
 }
 
 @media (max-width: 900px) {
-  header {
-    display: none;
+  header * {
+    /* outline: red 1px solid; */
   }
 
-  /* header {
+  header {
     display: flex;
     flex-flow: column nowrap;
-  } */
+    row-gap: 10px;
+    height: fit-content;
+  }
+
+  header .about-container {
+    flex-direction: column;
+  }
+
+  header .about-img {
+    padding-top: 1em;
+  }
+
+  header .about-text {
+    /* align-self: center; */
+    margin: 0 20px 10px;
+  }
+
+  header .about-text h2 {
+    text-align: center;
+  }
+
+  header .info div {
+    padding-bottom: 20px;
+  }
+
+  header .progressBars-container {
+    padding-bottom: 20px;
+  }
 }

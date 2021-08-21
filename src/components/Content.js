@@ -1,29 +1,4 @@
-import { HiChevronDoubleRight } from "react-icons/hi";
 import '../styles/Content.css'
-
-
-export const MaybePost = props => {
-  return (
-    <div className="post" style={{ width: props.width + "%" }}>
-      <div className="post-container">
-        <img src="https://picsum.photos/300/200" alt="" />
-        <div className="preview">
-          <h2>{props.title}</h2>
-          <p>fecha acá</p>
-          <br />
-          <h4>
-            {props.content}
-          </h4>
-          <br />
-          <h4 className="read-more">
-            Read more
-            <HiChevronDoubleRight />
-          </h4>
-        </div>
-      </div>
-    </div>
-  );
-}
 
 const Post = () => {
   return (

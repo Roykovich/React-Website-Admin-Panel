@@ -46,12 +46,3 @@ body {
   background-color: var(--accent-less, #729b79);
   color: white;
 }
-
-/* MEDIA QUERIES */
-
-@media (max-width: 800px) {
-  /* header {
-    display: flex;
-    flex-direction: column;
-  } */
-}

@@ -126,10 +126,6 @@ header .bar-progress {
 }
 
 @media (max-width: 900px) {
-  header * {
-    /* outline: red 1px solid; */
-  }
-
   header {
     display: flex;
     flex-flow: column nowrap;

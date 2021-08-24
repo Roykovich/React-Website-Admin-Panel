@@ -29,7 +29,7 @@ const Post = () => {
   return (
     <article className="post">
       <div className="post-container">
-        <img src="https://picsum.photos/300/200" alt="" />
+        <img src="https://picsum.photos/600/400" alt="" />
         <div className="preview">
           <h2 class="post-title">Title placeholder</h2>
           <p className="post-date">August 18, 2021</p>
@@ -46,7 +46,7 @@ const Post = () => {
           </h4>
         </div>
       </div>
-    </article
+    </article>
   );
 };
 

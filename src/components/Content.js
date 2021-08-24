@@ -27,26 +27,26 @@ export const MaybePost = props => {
 
 const Post = () => {
   return (
-    <div className="post">
+    <article className="post">
       <div className="post-container">
         <img src="https://picsum.photos/300/200" alt="" />
         <div className="preview">
-          <h2>Title placeholder</h2>
-          <p>August 18, 2021</p>
+          <h2 class="post-title">Title placeholder</h2>
+          <p className="post-date">August 18, 2021</p>
           <br />
-          <h4>
+          <p className="post-description">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis
             libero ratione corrupti eos rerum vel praesentium possimus officiis
             ab commodi aspernatur laudantium neque, suscipit voluptatem nisi
             repellendus officia quia atque!
-          </h4>
+          </p>
           <br />
           <h4 className="read-more">
             Read more
           </h4>
         </div>
       </div>
-    </div>
+    </article
   );
 };
 

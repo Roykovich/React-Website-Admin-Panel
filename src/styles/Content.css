@@ -15,8 +15,8 @@
   align-items: flex-start;
   margin-top: 20px;
   max-width: 100%;
-  border: 3px solid var(--theme-accent-less);
   border-radius: 4px;
+  background-color: var(--theme-accent-less);
 }
 
 .post-container {
@@ -33,7 +33,7 @@
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 10px 0 10px 20px;
+  padding: 10px 20px;
 }
 
 .post-description {

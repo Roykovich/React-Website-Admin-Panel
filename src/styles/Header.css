@@ -12,6 +12,11 @@ header {
   background-color: var(--theme-page-background);
 }
 
+header > section:nth-child(1),
+section:nth-child(3) {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
 header .about {
   display: flex;
   flex: 1 1 0px;
@@ -66,6 +71,7 @@ header .info div {
   height: 110px;
   padding: 5px 0 5px 20px;
   background-color: var(--theme-accent-less);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
 header .info h2 {
@@ -130,7 +136,7 @@ header .bar-progress {
     display: flex;
     flex-flow: column nowrap;
     row-gap: 10px;
-    padding: 10px 0;
+    padding: 10px 20px;
     height: fit-content;
   }
 
@@ -151,8 +157,13 @@ header .bar-progress {
     text-align: center;
   }
 
+  .info {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  }
+
   header .info div {
     padding-bottom: 20px;
+    box-shadow: none;
   }
 
   header .progressBars-container {

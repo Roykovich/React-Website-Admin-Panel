@@ -25,7 +25,7 @@ const Header = props => {
   return (
     <header>
       {/* Aquí una imagen? */}
-      <div className="about">
+      <section className="about">
         <div className="about-container">
           <div className="about-img">
             <img
@@ -43,8 +43,8 @@ const Header = props => {
             </Link>
           </div>
         </div>
-      </div>
-      <div className="info">
+      </section>
+      <section className="info">
         <div>
           <h2>Events</h2>
           <p>{props.events}</p>
@@ -59,8 +59,8 @@ const Header = props => {
             Read more
           </Link>
         </div>
-      </div>
-      <div className="progressBars">
+      </section>
+      <section className="progressBars">
         <div className="progressBars-container">
           {
             props.bookProgress.length > 0 ? (
@@ -72,7 +72,7 @@ const Header = props => {
             )
           }
         </div>
-      </div>
+      </section>
     </header>
   );
 };

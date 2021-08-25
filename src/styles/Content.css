@@ -15,7 +15,7 @@
   align-items: flex-start;
   margin-top: 20px;
   max-width: 100%;
-  border-radius: 4px;
+  border-radius: 6px;
   background-color: var(--theme-accent-less);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
@@ -28,6 +28,7 @@
 .post-container img {
   width: 300px;
   height: auto;
+  border-radius: 6px 0 0 6px;
 }
 
 .preview {

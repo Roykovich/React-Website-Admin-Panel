@@ -7,7 +7,6 @@ import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import Content from "./components/Content";
 import Panel from "./components/Panel";
-import Footer from "./components/Footer";
 
 function Home() {
   const [theme, setTheme] = useState("light");

@@ -14,7 +14,7 @@ const Navbar = ({ toggleTheme }) => {
 
   return (
     <nav>
-      <p className="navbar-logo">Logo here</p>
+      <p className="navbar-logo">John Doe</p>
       <div className="navbar-buttons">
         <label className="switch">
           <input type="checkbox" />

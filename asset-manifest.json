@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/React-Website-Admin-Panel/static/css/main.ec7a628c.chunk.css",
+    "main.js": "/React-Website-Admin-Panel/static/js/main.c16b2761.chunk.js",
+    "main.js.map": "/React-Website-Admin-Panel/static/js/main.c16b2761.chunk.js.map",
+    "runtime-main.js": "/React-Website-Admin-Panel/static/js/runtime-main.131132d3.js",
+    "runtime-main.js.map": "/React-Website-Admin-Panel/static/js/runtime-main.131132d3.js.map",
+    "static/js/2.359c4cea.chunk.js": "/React-Website-Admin-Panel/static/js/2.359c4cea.chunk.js",
+    "static/js/2.359c4cea.chunk.js.map": "/React-Website-Admin-Panel/static/js/2.359c4cea.chunk.js.map",
+    "static/js/3.e41442a9.chunk.js": "/React-Website-Admin-Panel/static/js/3.e41442a9.chunk.js",
+    "static/js/3.e41442a9.chunk.js.map": "/React-Website-Admin-Panel/static/js/3.e41442a9.chunk.js.map",
+    "index.html": "/React-Website-Admin-Panel/index.html",
+    "static/css/main.ec7a628c.chunk.css.map": "/React-Website-Admin-Panel/static/css/main.ec7a628c.chunk.css.map",
+    "static/js/2.359c4cea.chunk.js.LICENSE.txt": "/React-Website-Admin-Panel/static/js/2.359c4cea.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.131132d3.js",
+    "static/js/2.359c4cea.chunk.js",
+    "static/css/main.ec7a628c.chunk.css",
+    "static/js/main.c16b2761.chunk.js"
+  ]
+}

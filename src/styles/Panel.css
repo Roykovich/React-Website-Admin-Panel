@@ -217,3 +217,11 @@ textarea:focus {
   border: var(--theme-accent) 2px solid;
   outline: none;
 }
+
+/* Media Queries */
+
+@media (max-width: 900px) {
+  .settings > .createPost {
+    flex-direction: column;
+  }
+}

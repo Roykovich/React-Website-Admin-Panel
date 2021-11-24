@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, HashRouter, Route } from "react-router-dom";
 import "./styles/themes.css";
 import "./styles/App.css";
 import ProtectedRoute from "./auth/protected-route";
@@ -30,7 +30,8 @@ function Home() {
   }, []);
 
   return (
-    <Router>
+    // <Router>
+    <HashRouter>
       <div className={`container ${theme}`}>
         <Navbar toggleTheme={toggleTheme} />
         <div className="wrapper">
@@ -50,7 +51,8 @@ function Home() {
         </div>
         {/* <Footer />   */}
       </div>
-    </Router>
+    </HashRouter>
+    // </Router>
   );
 }
 

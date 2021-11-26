@@ -39,23 +39,23 @@ export const EditPage = (props) => {
   };
 
   const onSubmit = (event) => {
-    event.preventDefault()
+    event.preventDefault();
 
-    fetch('http://localhost:5000/config', {
+    fetch("http://localhost:5000/config", {
       method: "put",
       headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
+        Accept: "application/json",
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({
         events,
         last_updates: updates,
-        book_progress: bookProgress
-      })
+        book_progress: bookProgress,
+      }),
     })
-      .then(alert('Save!'))
-      .catch(err => console.log(err));
-  }
+      .then(alert("Save!"))
+      .catch((err) => console.log(err));
+  };
 
   return (
     <>
@@ -63,10 +63,7 @@ export const EditPage = (props) => {
         <Header events={events} updates={updates} bookProgress={bookProgress} />
       </div>
       <div className="headerSettings">
-        <form
-          method="put"
-          onSubmit={onSubmit}
-        >
+        <form method="put" onSubmit={onSubmit}>
           <div>
             <label htmlFor="Events">
               <b>Events</b>
@@ -109,10 +106,7 @@ export const EditPage = (props) => {
           </div>
           <button className="save-button">Save</button>
         </form>
-        <form
-          method="put"
-          onSubmit={onSubmit}
-        >
+        <form method="put" onSubmit={onSubmit}>
           {bookProgress.map((book, i) => {
             return (
               <BookProgressContainer
@@ -177,9 +171,11 @@ export const NewPost = () => {
   return (
     <>
       <h1>Create a new post</h1>
-      <div className="preview">
-        <MaybePost title={title} content={content} width={100} />
-      </div>
+      <MaybePost
+        title={title}
+        content={content}
+        src={"https://picsum.photos/600/400?random=1"}
+      />
       <div className="createPost">
         <form action="POST">
           <label htmlFor="Título">

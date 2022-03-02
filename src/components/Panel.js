@@ -4,37 +4,35 @@ import { useState, useEffect } from "react";
 import "../styles/Panel.css";
 import { NewPost, EditPage } from "../components/Settings";
 
-const Panel = props => {
+const Panel = (props) => {
   const [active, setActive] = useState("New Post");
   const [events, setEvents] = useState("There's no current events.");
   const [updates, setUpdates] = useState("There's no current updates.");
+  const [sidenavStatus, setSideNavStatus] = useState(false);
   const [bookProgress, setBookProgress] = useState([]);
 
-
   const options = ["New Post", "Edit Page", "Analytics"];
-
 
   const makeActive = (option) => {
     setActive(option);
   };
 
   useEffect(() => {
-    fetch('http://localhost:5000/config')
-      .then(res => res.json())
-      .then(async data => {
+    fetch("http://localhost:5000/config")
+      .then((res) => res.json())
+      .then(async (data) => {
         setBookProgress([...data.book_progress]);
         setEvents(data.events);
         setUpdates(data.last_updates);
       })
-      .catch(err => console.error(err));
-  }, [])
+      .catch((err) => console.error(err));
+  }, []);
 
   return (
     <main className="main-panel">
       <div className="admin">
         <div className="menu">
           <div className="options">
-            <h3>John Doe</h3>
             <ul>
               {options.map((item, i) => {
                 return (
@@ -49,7 +47,6 @@ const Panel = props => {
               })}
             </ul>
           </div>
-          <p>Website Admin v0.1.0</p>
         </div>
         <div className="settings">
           {active === "New Post" ? (

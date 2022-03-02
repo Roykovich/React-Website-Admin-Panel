@@ -22,8 +22,7 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  align-items: flex-start;
   box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%);
   background-color: var(--theme-accent-less);
 }
@@ -221,7 +220,23 @@ textarea:focus {
 /* Media Queries */
 
 @media (max-width: 900px) {
+  .admin {
+    position: relative;
+  }
+
   .settings > .createPost {
     flex-direction: column;
+  }
+
+  .admin > .menu {
+    z-index: 1;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    align-items: flex-end;
+    width: 0%;
+    height: 100%;
+    transition: 0.4s;
   }
 }
